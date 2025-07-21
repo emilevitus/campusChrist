@@ -1,0 +1,30 @@
+<form method="post">
+    {% csrf_token %}
+
+    <label for="id_nom">Nom :</label>
+    {{ form.nom }}
+
+    <label for="id_prenom">Prénom :</label>
+    {{ form.prenom }}
+
+    <label for="id_email">Email :</label>
+    {{ form.email }}
+
+    <label for="id_statut">Statut :</label>
+    {{ form.statut }}
+
+    <label for="id_telephone">Téléphone :</label>
+    {{ form.telephone }}
+
+    <label for="id_sexe">Sexe :</label>
+    {{ form.sexe }}
+
+    <label for="id_adresse">Adresse :</label>
+    {{ form.adresse }}
+
+    <label for="id_date_naissance">Date de naissance :</label>
+    {{ form.date_naissance }}
+
+    <button type="submit">Envoyer</button>
+</form>
+

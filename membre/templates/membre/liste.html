@@ -1,0 +1,14 @@
+<table border="1">
+    <tr><th>Nom</th><th>Email</th><th>Statut</th><th>Actions</th></tr>
+    {% for membre in membres %}
+    <tr>
+        <td>{{ membre.nom }} {{ membre.prenom }}</td>
+        <td>{{ membre.email }}</td>
+        <td>{{ membre.statut }}</td>
+        <td>
+            <a href="{% url 'modifier_membre' membre.id %}">✏️ Modifier</a>
+            <a href="{% url 'supprimer_membre' membre.id %}">🗑️ Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
